@@ -67,12 +67,6 @@ Protected Class GraphicsContext
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Sub context_DrawFocusRing(x As Double, y As Double, width As Double, height As Double)
-		  g._DrawFocusRing(x,y,width,height)
-		End Sub
-	#tag EndMethod
-
-	#tag Method, Flags = &h0
 		Sub context_DrawLine(x1 As Double, y1 As Double, x2 As Double, y2 As Double)
 		  g.DrawLine(x1, y1, x2, y2)
 		End Sub
