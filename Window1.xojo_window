@@ -39,10 +39,10 @@ Begin Window Window1
       Index           =   -2147483648
       InitialParent   =   ""
       Left            =   473
-      LockBottom      =   False
+      LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   True
-      LockRight       =   False
+      LockRight       =   True
       LockTop         =   True
       Scope           =   0
       TabIndex        =   0
@@ -75,7 +75,7 @@ Begin Window Window1
       LimitText       =   0
       LineHeight      =   0.0
       LineSpacing     =   1.0
-      LockBottom      =   False
+      LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
@@ -107,7 +107,7 @@ Begin Window Window1
       LockedInPosition=   False
       Scope           =   0
       Source          =   ""
-      Srouce          =   ""
+      Source          =   ""
       State           =   "0"
       TabPanelIndex   =   0
    End
