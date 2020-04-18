@@ -90,7 +90,7 @@ Begin Window Window1
       TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
-      Text            =   ""
+      Text            =   "// Tweak these constants to change the logo's appearance.\nConst TEXT_COLOR = &c0e73c0\nConst BACKGROUND_COLOR = &cfefefe\nConst BORDER_COLOR = &c0e73c0\nConst LOGO_TEXT_SIZE = 200\nDim logoText As String = ""if(!0"" + &u338 + "")""\n\nDim w, h As Integer\nDim borderThickness As Integer = LOGO_TEXT_SIZE * 0.30\n\ng.TextSize = LOGO_TEXT_SIZE\ng.Bold = True\n\nw = g.StringWidth(logoText) + borderThickness\nh= g.TextHeight + borderThickness\n\nDim penSize As Integer = LOGO_TEXT_SIZE / 10\ng.PenHeight = penSize\ng.PenWidth = g.PenHeight\n\n// Draw a filled rounded rectangle background.\ng.ForeColor = BACKGROUND_COLOR\ng.FillRoundRect(0,(PenSize/2), w + PenSize, h,borderThickness, borderThickness)\n\n// Draw the outline of a rounded rectangle to act as the border.\ng.ForeColor = BORDER_COLOR\ng.DrawRoundRect(0, (PenSize/2), w + PenSize, h, borderThickness, borderThickness)\n\nDim x As Integer = ((w + PenSize) - g.StringWidth(logoText)) / 2\nDim y As Integer = g.TextAscent + (h - g.TextHeight) / 2\ng.ForeColor = TEXT_COLOR\nFor i As Integer = 0 To logoText.Len\n  Dim y1 As Integer = y\n  // yes we use the really old style here as the extension method in XojoSCript gets it wrong\n  // see <feedback://showreport?report_id=59815>\n  Dim c As String = mid(logoText,i+1, 1)\n  If c = ""0"" Then \n    c = ""0"" + &u338\n    i = i + 1\n  End If\n  If c = ""("" Or c = "")"" Then \n    y1 = y1 - (0.075 * LOGO_TEXT_SIZE)\n  End If\n  g.DrawString(c, x, y1)\n  \n  x = x + g.StringWidth(c)\nNext i"
       TextColor       =   &c00000000
       TextFont        =   "System"
       TextSize        =   0.0

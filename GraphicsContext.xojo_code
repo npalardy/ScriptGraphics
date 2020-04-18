@@ -336,6 +336,78 @@ Protected Class GraphicsContext
 		End Function
 	#tag EndMethod
 
+	#tag Method, Flags = &h0
+Function context_CLong(Str as string)as int64
+return Clong(str)
+End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+Function context_CountFieldsB(aString As String, separator As String) As Integer
+return CountFieldsB(aString, separator)
+End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+Function context_EncodeHex(s As String, insertSpaces As Boolean = False) As String
+ return EncodeHex(s, insertSpaces)
+End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+Function context_EndOfLine() As String
+return EndOfLine()
+End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+Function context_InStr(start As Integer = 0, source As String, find As String) As Integer
+return InStr(start, source, find)
+End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+Function context_InStrB(start As Integer = 0, source As String, find As String) As Integer
+return InStrB(start, source, find)
+End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+Function context_Join(fields() As String, delimiter As String = " ") As String
+return Join(fields, delimiter)
+End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+Function context_Mid(source As String, start As Integer) As String
+return Mid(source, start)
+End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+Function context_Mid(source As String, start As Integer, length As Integer) As String
+return Mid(source, start, length)
+End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+Function context_NthField(aString As String, separator As String, index As Integer) As String
+return NthField(aString, separator, index)
+End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+Function context_SplitB(source As String, delimiter As String = " ") As String()
+return context_SplitB(source, delimiter)
+End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+Function context_Val(Str As String) As Double
+return Val(Str)
+End Function
+	#tag EndMethod
+
 
 	#tag Property, Flags = &h21
 		Private g As graphics
